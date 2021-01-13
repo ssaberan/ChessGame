@@ -20,7 +20,8 @@ const App = () => {
         if (blackOpeningBook[chess.fen()]) {
           chess.move(blackOpeningBook[chess.fen()]);
         } else {
-          const computerMove = bestMove(chess, 1);
+          // eslint-disable-next-line no-unused-vars
+          const [computerMove, _] = bestMove(chess, 2);
           chess.move(computerMove);
         }
       }
